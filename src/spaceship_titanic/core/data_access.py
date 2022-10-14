@@ -5,7 +5,7 @@ from pandas import DataFrame
 
 
 class Data:
-    path_data = Path(r'../data').resolve().absolute()
+    path_data = Path(r'data').resolve().absolute()
     path_raw = path_data.joinpath(r'01_raw')
     path_raw_train = path_raw.joinpath(r'train.parquet')
     path_intermediate = path_data.joinpath(r'02_intermediate')

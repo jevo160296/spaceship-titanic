@@ -1,0 +1,54 @@
+mlflow_experiment_name: spaceship_titanic
+mlflow_experiment_description: >
+  TreeClassifier, el procesamiento de datos nulos se realiza eliminándolos
+
+columns_classification:
+  id:
+    - PassengerId
+    - Name
+  categorical:
+    - HomePlanet
+    - Cabin
+    - Destination
+  binary:
+    - CryoSleep
+    - VIP
+    - Transported
+  continuous:
+    - RoomService
+    - FoodCourt
+    - ShoppingMall
+    - Spa
+    - VRDeck
+  discrete:
+    - Age
+
+X_names:
+  - CryoSleep
+  - FoodCourt
+  - HomePlanet
+  - Age
+  - ShoppingMall
+  - Spa
+  - VRDeck
+  - RoomService
+  - Destination
+  - VIP
+
+y_name: Transported
+
+columnas_a_eliminar_nulos:
+  - CryoSleep
+  - FoodCourt
+  - HomePlanet
+  - Age
+  - ShoppingMall
+  - Spa
+  - VRDeck
+  - RoomService
+  - Destination
+  - VIP
+
+columnas_ordinal_encoder:
+  - HomePlanet
+  - Destination

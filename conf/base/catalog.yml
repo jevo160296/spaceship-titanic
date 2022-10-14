@@ -2,3 +2,26 @@
 #
 # Documentation for this file format can be found in "The Data Catalog"
 # Link: https://kedro.readthedocs.io/en/stable/data/data_catalog.html
+test_score:
+  type: text.TextDataSet
+  filepath: data/08_reporting/test_score.txt
+  layer: Reporte
+
+train_score:
+  type: text.TextDataSet
+  filepath: data/08_reporting/train_score.txt
+  layer: Reporte
+
+y_test_predict:
+  type: pandas.CSVDataSet
+  filepath: data/07_model_output/y_test_predict.csv
+  load_args:
+    sep: ","
+  save_args:
+    index: True
+  layer: Resultados
+
+reporte_tamano:
+  type: text.TextDataSet
+  filepath: data/08_reporting/reporte_tamano.txt
+  layer: Reporte
