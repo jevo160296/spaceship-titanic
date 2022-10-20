@@ -1,0 +1,16 @@
+artifact_uri: file:///C:/Users/jevo1/Documents/Python%20Scripts/kaggle/spaceship-titanic/mlruns/1/67e5549dc60e446d9244565b5c58c38d/artifacts
+deleted_time: 1666234569247
+end_time: 1666233789639
+entry_point_name: ''
+experiment_id: '1'
+lifecycle_stage: deleted
+name: ''
+run_id: 67e5549dc60e446d9244565b5c58c38d
+run_uuid: 67e5549dc60e446d9244565b5c58c38d
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1666233638766
+status: 3
+tags: []
+user_id: jevo1

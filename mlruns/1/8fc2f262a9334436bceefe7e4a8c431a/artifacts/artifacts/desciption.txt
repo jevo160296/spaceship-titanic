@@ -1,0 +1,1 @@
+TreeClassifier, el procesamiento de datos nulos se realiza con un simple imputer, las variables numéricas con la media y las categoricas con la moda.

@@ -17,18 +17,18 @@ def create_pipeline(**kwargs) -> Pipeline:
             outputs=['train_data_column_select', 'column_selector_entrenado']
         ),
         node(
-            func=entrenar_ordinal_encoder,
-            inputs=['train_data_column_select', 'parameters'],
-            outputs=['train_data_ordinal_encoder', 'ordinal_transformer_entrenado']
-        ),
-        node(
             func=entrenar_simple_imputer,
-            inputs=['train_data_ordinal_encoder', 'parameters'],
+            inputs=['train_data_column_select', 'parameters'],
             outputs=['train_data_imputer', 'simple_imputer_entrenado']
         ),
         node(
+            func=entrenar_ordinal_encoder,
+            inputs=['train_data_imputer', 'parameters'],
+            outputs=['train_data_ordinal_encoder', 'ordinal_transformer_entrenado']
+        ),
+        node(
             func=construir_sklearn_pipeline,
-            inputs=['train_data_imputer', 'ordinal_transformer_entrenado', 'simple_imputer_entrenado',
+            inputs=['train_data_ordinal_encoder', 'ordinal_transformer_entrenado', 'simple_imputer_entrenado',
                     'column_selector_entrenado'],
             outputs=['train_data_procesada', 'transformer_entrenado']
         )

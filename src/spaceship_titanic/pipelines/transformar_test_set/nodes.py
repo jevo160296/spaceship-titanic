@@ -15,7 +15,8 @@ def transformar_test_set(data: DataFrame,
                          transformer_entrenado: Pipeline,
                          parameters: Dict[str, Any]) -> DataFrame:
     parameters = Parameters(parameters)
-    data = data.copy()
-    data[parameters.columnas_ordinal_encoder] = \
-        transformer_entrenado.transform(data[parameters.columnas_ordinal_encoder])
+    data.index = data['PassengerId']
+    data = data.reindex(columns=parameters.X_names).copy()
+    data['Transported'] = 1
+    data = transformer_entrenado.transform(data)
     return data

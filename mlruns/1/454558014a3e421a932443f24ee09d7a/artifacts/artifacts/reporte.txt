@@ -1,0 +1,2 @@
+Tamaño de entrada: 4277
+Tamaño de salida: 4277

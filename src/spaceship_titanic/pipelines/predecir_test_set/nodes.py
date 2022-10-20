@@ -17,7 +17,7 @@ def predecir_test_set(data: DataFrame,
     parameters = Parameters(parameters)
     # y_test_real = data[parameters.y_name]
     y_test_predict: Series = Series(data=modelo.predict(data[parameters.X_names]),
-                                    index=data['PassengerId'],
+                                    index=data.index,
                                     name='Transported')
     return y_test_predict
 
