@@ -1,4 +1,4 @@
-from typing import Dict, FrozenSet, List
+from typing import Dict, FrozenSet, List, TypedDict, Any
 
 
 class Parameters(dict):
@@ -30,3 +30,17 @@ class Parameters(dict):
     @property
     def columnas_a_eliminar_nulos(self) -> List[str]:
         return self['columnas_a_eliminar_nulos']
+
+
+class CatalogEntry(TypedDict, total=False):
+    type: str
+    filepath: str
+
+
+class Catalog(TypedDict):
+    test_score: CatalogEntry
+    train_score: CatalogEntry
+    y_test_predict: CatalogEntry
+    reporte_tamano: CatalogEntry
+    transformer_entrenado: CatalogEntry
+    modelo_entrenado: CatalogEntry

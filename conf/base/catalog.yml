@@ -25,3 +25,14 @@ reporte_tamano:
   type: text.TextDataSet
   filepath: data/08_reporting/reporte_tamano.txt
   layer: Reporte
+
+transformer_entrenado:
+  type: pickle.PickleDataSet
+  backend: pickle
+  filepath: data/06_models/transformer_entrenado.pkl
+
+
+modelo_entrenado:
+  type: pickle.PickleDataSet
+  backend: pickle
+  filepath: data/06_models/modelo_entrenado.pkl
